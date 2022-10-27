@@ -1,0 +1,11 @@
+.error {
+  padding: 20px;
+  text-align: center;
+  color: var(--bs-danger);
+  border: 1px solid var(--bs-danger);
+  border-radius: 7px;
+
+  p {
+    font-size: 22px;
+  }
+}

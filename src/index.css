@@ -6,3 +6,30 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+#root {
+  display: flex;
+  justify-content: center;
+}
+
+.app {
+  max-width: 960px;
+  width: 100%;
+  padding-top: 20px;
+}
+
+.post-enter {
+  opacity: 0;
+}
+
+.post-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.post-exit {
+  opacity: 1;
+}
+.post-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
