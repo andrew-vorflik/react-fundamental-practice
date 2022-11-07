@@ -1,18 +1,14 @@
 import { Error } from "../components/Error/Error";
 import { Loading } from "../components/Loading/Loading";
 
-export const fetchedComponent = (Component) => {
-  return (props) => {
-    const { isLoading, error } = props;
+export const FetchedWrapCOmponent = ({ children, isLoading, error }) => {
+  if (isLoading) {
+    return <Loading />;
+  }
 
-    if (isLoading) {
-      return <Loading />;
-    }
+  if (error) {
+    return <Error message={error} />;
+  }
 
-    if (error) {
-      return <Error message={error} />;
-    }
-
-    return <Component {...props} />;
-  };
+  return children;
 };

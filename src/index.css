@@ -7,15 +7,21 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  display: flex;
-  justify-content: center;
-}
-
 .app {
+  margin: 20px auto 0;
   max-width: 960px;
   width: 100%;
-  padding-top: 20px;
+}
+
+.post-banner {
+  max-height: 400px;
+}
+
+.post-item-image {
+  height: 100px;
+  width: 100px;
+  background: #ccc;
+  border-radius: 6px;
 }
 
 .post-enter {
@@ -32,4 +38,8 @@ body {
 .post-exit-active {
   opacity: 0;
   transition: opacity 200ms;
+}
+
+.postTitle::first-letter {
+  text-transform: uppercase;
 }

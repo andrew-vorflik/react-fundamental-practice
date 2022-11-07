@@ -2,9 +2,12 @@ import { useMemo } from "react";
 
 export const usePosts = ({ posts, filters }) => {
   const getSortedPosts = () => {
+    if (!filters.sort) {
+      return posts;
+    }
+
     return [...posts].sort((a, b) => {
-      const sortValue = filters.sort ? filters.sort : "title";
-      return a[sortValue].localeCompare(b[sortValue]);
+      return a[filters.sort].localeCompare(b[filters.sort]);
     });
   };
 

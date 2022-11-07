@@ -3,6 +3,7 @@ import { Form } from "react-bootstrap";
 import classes from "./Filters.module.scss";
 
 const sortOptions = [
+  { name: "No sort", value: "" },
   { name: "Title", value: "title" },
   { name: "Content", value: "body" },
 ];
